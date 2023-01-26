@@ -1,0 +1,87 @@
+<!Doctype html>
+    <html>  
+            <head>
+                <script>
+                    function validateForm() {
+                      let x = document.forms["myForm"]["fname"].value;
+                      if (x == "") {
+                        alert("Email and Password must be filled out.");
+                        return false;
+                      }
+                    }
+                </script>
+
+                   <title>Health Plan</title>
+                    <style> 
+                        input[type=email]{
+                            padding: 12px 20px;   
+                        }
+
+                        input[type=password]{
+                            padding: 12px 20px;
+                        }
+
+                        input[type=submit]{
+                            padding: 12px 20px;
+                        }
+
+                        .header{
+                            padding: 3px;
+                            text-align: center;
+                            background: darkblue;
+                            color: white;
+                            font-size: 15px;
+                        }
+
+                        .header2{
+                            padding: 20px;
+                            text-align: center;
+                            background: white;
+                            color: white;
+                            font-size: 15px;
+                        }
+                    </style>   
+            </head>
+
+            <body>
+                <div class="header">
+                    <h2>Learn how to protect yourself and your Family. </h2>
+                </div>
+
+                <div class="header2">
+                    <table align="right">
+                        <tr>
+                            <td><a href="C:\Users\ftp-user\Desktop\HealthPlan\Register.html">Register</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <table align="right" id="input">
+                    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                        <tr>
+                            </td>
+                                <td><input type="email" name ="fname" id="myemail" size ="25" placeholder="Email"></td>
+                                <td><input type="password" name="pwd" id="mypwd" size="25" placeholder="Password"></td>
+                                <td><input type="submit" value="Sign in">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="">Forgot your user ID</a> or <a href="">password</a></td>
+                        </tr>
+                    </form>>
+                </table>
+ 
+                <table align="center">
+                    <tr>
+                        <td>
+                            <img src =".\images\foodie.png" alt="health" usemap ="#myShape">
+                                <map name ="myShape">
+                                    <area shape ="rect" coords = "150,134,510,203" href="http://gdadeyeye.github.io/mobile" target = "_blank"></a>
+                                </map>
+                        </td>
+                        <td><img src =".\images\foodie2.png"></td>
+                    </tr>
+                </table>     
+            </body>
+    </html>

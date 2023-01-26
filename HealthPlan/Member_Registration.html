@@ -1,0 +1,112 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Member Registration</title>
+        <style>
+              input[type=submit]{
+                    padding: 12px 50px;
+                        }
+
+                input[type=text]{
+                    padding: 12px 50px;
+                        }
+                 input[type=date]{
+                    padding: 12px 50px;
+                        }
+
+
+        </style>
+
+    </head>
+    <body>
+     
+
+        <center>
+            <h1>First, tell us a little about yourself</h1>
+        
+        <table>
+            <tr>
+                <td>WHERE DO YOU GET CARE?</td>
+             </tr>
+<br><br>
+        <tr>
+             <td>
+                <select name="Region" id="region">
+                <option value="Region">Choose region</option>
+                <option value="Region">California(N)</option>
+                <option value="Region">California(S)</option>
+                <option value="Region">Colorado</option>
+                <option value="Region">Georgia</option>
+                <option value="Region">Hawaii</option>
+                <option value="Region">Md. / Va. /D.C</option>
+                <option value="Region">Ore. /SW Wash</option>
+                <option value="Region">Washington</option>
+                </select>
+            </td>
+        </tr>
+        </table>
+        
+    
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        
+    <table>
+        <tr>
+            <td>HEALTH/MEDICAL RECORD NUMBER</td>
+        </tr>
+
+        <tr>
+            <td><input type="text" name="text1" size="25" required></td>
+        </tr>
+        
+        <tr>
+            <td>FIRST NAME</td>
+        </tr>
+
+        <tr>
+            <td><input type="text" name="text1" size="25" required></td>
+        </tr>
+            
+        <tr>
+            <td>LAST NAME</td>
+        </tr>
+
+        <tr>
+            <td><input type="text" name="text1" size="25" required></td></td>
+        </tr>
+
+        <tr>
+            <td>DATE OF BIRTH</td>
+        </tr>
+
+        <tr>
+            <td><input type="date" name="date1" size="25" required></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" onclick= "myFunction()" value="Register"></td>
+        </tr>
+</table>
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_POST['text1'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+?>
+    </center>
+
+    <script>
+        function myfunction(){
+            document.getElementsByName("myForm").submit();
+        }
+    </script>
+
+    </body>
+
+</html>
